@@ -9,9 +9,16 @@ import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import com.example.esemkagym.data.HttpHandler
+import com.example.esemkagym.data.local.TokenManager
 import com.example.esemkagym.databinding.ActivityMainBinding
 import com.example.esemkagym.ui.fragment.DailyCheckInCodeFragment
 import com.example.esemkagym.ui.fragment.ManageMemberFragment
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
@@ -44,10 +51,24 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun resume() {
+    fun resumeOrApprove(memberId: Int, act: String) {
+        lifecycleScope.launch {
+            val result = withContext(Dispatchers.IO) {
+                HttpHandler().request(
+                    "member/$memberId/$act",
+                    "PUT",
+                    token = TokenManager(this@MainActivity).get()
+                )
+            }
 
+            if (result.code in 200..300) {
+                (supportFragmentManager.findFragmentById(R.id.frame) as ManageMemberFragment).apply {
+                    val currStatus = status
+                    checkPostion(currStatus)
+                }
+            }
+        }
     }
-
 
     fun openDraw() {
         binding.sideBar.openDrawer(GravityCompat.START)
