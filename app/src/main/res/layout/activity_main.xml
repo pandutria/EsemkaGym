@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/sideBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:elevation="3dp"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame"/>
+
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="30sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/primary"/>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/admin"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Admin"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Admin"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#898989"
+                android:textSize="14sp"
+                android:textAlignment="center"/>
+            
+            <LinearLayout
+                android:id="@+id/menuCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:layout_marginTop="50dp">
+
+                <ImageView
+                    android:id="@+id/imageCode"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/home"/>
+
+                <TextView
+                    android:id="@+id/tvCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Checkin Code"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#898989"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/arrowCode"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/arrow_right"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menuMember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center"
+                android:paddingVertical="12dp">
+
+                <ImageView
+                    android:id="@+id/imageMember"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/member"/>
+
+                <TextView
+                    android:id="@+id/tvMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Member"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#898989"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/arrowMember"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/arrow_right"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menuReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center"
+                android:paddingVertical="12dp">
+
+                <ImageView
+                    android:id="@+id/imageReport"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/report"/>
+
+                <TextView
+                    android:id="@+id/tvReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Report"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#898989"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/arrowReport"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/arrow_right"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

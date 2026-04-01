@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".ui.SignInActivity">
+    
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="Sign In"
+        android:fontFamily="sans-serif-black"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="Hi there! Build Your muscle with us!"
+        android:textColor="#898989"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Email"
+        android:textColor="@color/primary"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="Your email address"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="15sp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="Password"
+        android:textColor="@color/primary"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="45dp">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="@color/black"
+            android:paddingEnd="25dp"
+            android:hint="Your password"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/imgEye"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/baseline_remove_red_eye_24"
+            android:elevation="2dp"/>
+
+    </FrameLayout>
+
+
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="20dp"-->
+<!--        android:text="Name"-->
+<!--        android:textColor="@color/primary"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+<!--        android:textSize="16sp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/etName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_marginHorizontal="20dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+<!--        android:textSize="15sp"/>-->
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/primary"
+        app:cornerRadius="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:text="Sign In"
+        android:textSize="16sp"
+        android:id="@+id/btn"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Or"
+        android:fontFamily="sans-serif-black"
+        android:textSize="14sp"
+        android:textColor="#898989"
+        android:layout_marginVertical="10dp"/>
+
+
+    <TextView
+        android:id="@+id/tvSign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Sign Up"
+        android:fontFamily="sans-serif-black"
+        android:textSize="16sp"
+        android:textColor="@color/primary"/>
+
+
+
+
+</LinearLayout>
