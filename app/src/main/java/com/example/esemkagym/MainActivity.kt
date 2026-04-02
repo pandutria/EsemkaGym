@@ -15,6 +15,7 @@ import com.example.esemkagym.data.local.TokenManager
 import com.example.esemkagym.databinding.ActivityMainBinding
 import com.example.esemkagym.ui.fragment.DailyCheckInCodeFragment
 import com.example.esemkagym.ui.fragment.ManageMemberFragment
+import com.example.esemkagym.ui.fragment.ReportFragment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -23,7 +24,6 @@ import org.json.JSONObject
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
-    val label = "daily"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -48,6 +48,11 @@ class MainActivity : AppCompatActivity() {
         binding.menuMember.setOnClickListener {
             binding.sideBar.closeDrawer(GravityCompat.START)
             showFragment(ManageMemberFragment())
+        }
+
+        binding.menuReport.setOnClickListener {
+            binding.sideBar.closeDrawer(GravityCompat.START)
+            showFragment(ReportFragment())
         }
     }
 

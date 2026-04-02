@@ -61,30 +61,7 @@ class SignUpActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            lifecycleScope.launch {
-                val gender = if (binding.rbMale.isChecked) "male" else "female"
-                val rBody = JSONObject().apply {
-                    put("email", binding.etEmail.text.toString())
-                    put("password", binding.etPassword.text.toString())
-                    put("name", binding.etNamee.text.toString())
-                    put("gender", gender)
-                }
 
-                val result = withContext(Dispatchers.IO) {
-                    HttpHandler().request(
-                        "signup",
-                        "POST",
-                        rBody = rBody.toString()
-                    )
-                }
-
-                if (result.code in 200..300) {
-                    Helper.toast(this@SignUpActivity, "Registration completes! Enter your email and password to login")
-                    startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
-                } else {
-                    Helper.toast(this@SignUpActivity, "Registration failed")
-                }
-            }
         }
     }
 }

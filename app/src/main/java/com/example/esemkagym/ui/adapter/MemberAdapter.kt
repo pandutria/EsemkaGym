@@ -52,13 +52,6 @@ class MemberAdapter(
                 "INACTIVE" -> {
                     binding.tvDate.text = "Last membership at ${LocalDate.parse(item.membershipEnd)}"
                     binding.btnResume.text = "Resume"
-
-                    val lastMembership = LocalDate.parse(item.joinedMemberAt).plusMonths(1)
-                    if (LocalDate.now() < lastMembership) {
-                        binding.btnResume.visibility = View.VISIBLE
-                    } else {
-                        binding.btnResume.visibility = View.GONE
-                    }
                 }
                 "PENDING_APPROVAL" -> {
                     binding.tvDate.text = "Register at ${LocalDate.parse(item.registerAt)}"
